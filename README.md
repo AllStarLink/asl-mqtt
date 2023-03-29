@@ -1,2 +1,3 @@
-# asl-mqtt
-AllStarLink MQTT
+# AllStarLink MQTT
+
+Expermental mqtt clients.
