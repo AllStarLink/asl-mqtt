@@ -2,4 +2,4 @@
 
 Expermental mqtt clients.
 
-Files go in /var/docker/asl-mqtt
+Put files in `/var/docker/asl-mqtt`.
