@@ -5,7 +5,7 @@ services:
     container_name: asl-mqtt
     image: ghcr.io/sgofferj/ami2mqtt:latest
     volumes:
-       - /var/docker/ami2mqtt/index.js:/usr/src/app/index.js
+       - /var/docker/asl-mqtt/index.js:/usr/src/app/index.js
     restart: always
     networks:
        - mosquitto_net
