@@ -1,0 +1,23 @@
+version: '2.0'
+
+services:
+  asl-mqtt:
+    container_name: asl-mqtt
+    image: ghcr.io/sgofferj/ami2mqtt:latest
+    volumes:
+       - /var/docker/ami2mqtt/index.js:/usr/src/app/index.js
+    restart: always
+    networks:
+       - mosquitto_net
+    environment:
+       - AMI_HOST=yourNode.nodes.allstarlink.org
+       - AMI_PORT=5038
+       - AMI_USERNAME=yourAMIuser
+       - AMI_PASSWORD=yourAMIpassword
+       - MQTT_URL=mqtt://172.29.0.2
+       #- MQTT_USERNAME=''
+       #- MQTT_PASSWORD=''
+
+networks:
+   mosquitto_net:
+      external: true
