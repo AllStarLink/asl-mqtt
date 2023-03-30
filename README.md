@@ -18,5 +18,11 @@ cd /var/docker/asl-mqtt
 ```
 ## Configure
 
-## This work is based on
+Edit the `environment:` section of docker-compose.yml
+
+Docker Compose is sensitive to indentation. Be sure to keep things lined up. 
+
+## Credits
+This work is based on other work from:
 - https://github.com/sgofferj/ami2mqtt
+- https://github.com/mscdex/node-asterisk
