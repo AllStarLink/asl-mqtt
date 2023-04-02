@@ -13,7 +13,7 @@ Expermental mqtt clients. Nothing much works, yet. Not even these instructions.
 Clone this repo to directory of choice, usually `/usr/src`.
 ```
 cd asl-mqtt
-make
+make ; Make is not working yet. Copy the files to /var/docker/asl-matt for now.
 cd /var/docker/asl-mqtt
 ```
 ## Configure
@@ -21,6 +21,13 @@ cd /var/docker/asl-mqtt
 Edit the `environment:` section of docker-compose.yml
 
 Docker Compose is sensitive to indentation. Be sure to keep things lined up. 
+
+## Running
+Start the normal docker-composer ways. In the directory where docker-compose.yml exists do 
+- `docker-dompose up -d`
+
+Subscribe to all topics
+- `mosquitto_sub -t "#" -v`
 
 ## Credits
 This work is based on other work from:
