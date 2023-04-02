@@ -13,7 +13,7 @@ Expermental mqtt clients. Nothing much works, yet. Not even these instructions.
 Clone this repo to directory of choice, usually `/usr/src`.
 ```
 cd asl-mqtt
-make ; Make is not working yet. Copy the files to /var/docker/asl-matt for now.
+make ; Make is not working yet. Copy the files to /var/docker/asl-mqtt for now.
 cd /var/docker/asl-mqtt
 ```
 ## Configure
