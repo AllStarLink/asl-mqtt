@@ -41,20 +41,20 @@ asterisk.keepConnected();
 
 asterisk.on('fullybooted', function (evt) {
     console.log("==== Do SawStat ====");
-    asterisk.action({
-        "Action": "RptStatus",
-        "Command": "SawStat",
-        "Node": "2509",
-        "ActionID": "getSawStat"
-    })
+//    asterisk.action({
+//        "Action": "RptStatus",
+//        "Command": "SawStat",
+//        "Node": "2509",
+//        "ActionID": "getSawStat"
+//    })
     //asterisk.action({
     //    "Action": "DeviceStateList",
     //    "ActionID": "getState"
     //})
-    //asterisk.action({
-        //"Action": "ExtensionStateList",
-        //"ActionID": "getExtensions"
-    //})
+    asterisk.action({
+        "Action": "ExtensionStateList",
+        "ActionID": "getExtensions"
+    })
 });
 
 mqtt_client.on('connect', function () {
@@ -96,7 +96,7 @@ asterisk.on('extensionstatus', function (evt) {
 asterisk.on('managerevent', function (evt) {
     console.log(JSON.stringify(evt));
     let topic = 'allstar/' + evt.event;
-    //mqtt_client.publish(topic, "DEBUG");
+    mqtt_client.publish(topic, JSON.stringify(evt));
 });
 
 asterisk.on('rpt_txkeyed', function (evt) {
